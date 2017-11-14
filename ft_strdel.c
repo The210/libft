@@ -6,7 +6,7 @@
 /*   By: dhorvill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 19:50:30 by dhorvill          #+#    #+#             */
-/*   Updated: 2017/11/09 20:07:39 by dhorvill         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:46:18 by dhorvill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_strdel(char **as)
 {
-	free(*as);
-	*as = NULL;
+	if (as != NULL)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

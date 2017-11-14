@@ -6,7 +6,7 @@
 /*   By: dhorvill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 17:22:18 by dhorvill          #+#    #+#             */
-/*   Updated: 2017/11/10 17:39:22 by dhorvill         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:16:50 by dhorvill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memalloc(size_t size)
 {
 	void *mem;
 
-	if ((mem = malloc(sizeof(mem) * size)) == 0)
+	if ((mem = malloc(size)) == 0)
 		return (NULL);
 	ft_memset(mem, 0, size);
 	return (mem);

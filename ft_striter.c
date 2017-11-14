@@ -6,18 +6,23 @@
 /*   By: dhorvill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 20:09:04 by dhorvill          #+#    #+#             */
-/*   Updated: 2017/11/09 20:14:21 by dhorvill         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:48:56 by dhorvill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 
 	i = 0;
-	while (s[i])
+	if (s != NULL && f != NULL)
 	{
-		f(&s[i]);
-		i++;
+		while (s[i])
+		{
+			f(&s[i]);
+			i++;
+		}
 	}
 }
